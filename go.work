@@ -11,3 +11,5 @@ use ./x/ibc-hooks
 use ./x/epochs
 
 replace github.com/onsi/ginkgo => github.com/onsi/ginkgo v1.16.5
+
+replace	github.com/cosmos/cosmos-sdk => github.com/osmosis-labs/cosmos-sdk v0.50.11-v28-osmo-1.0.20250205152732-6f2404a89fed
