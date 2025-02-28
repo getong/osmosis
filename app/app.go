@@ -556,6 +556,8 @@ func NewOsmosisApp(
 		transfer.NewAppModule(*app.TransferKeeper),
 	)
 
+	// Register the consensus params keeper as the params store to get access to consensus params in baseapp
+	app.SetParamStore(app.AppKeepers.ConsensusParamsKeeper.ParamsStore)
 	app.sm.RegisterStoreDecoders()
 
 	autocliv1.RegisterQueryServer(app.GRPCQueryRouter(), runtimeservices.NewAutoCLIQueryService(app.mm.Modules))
